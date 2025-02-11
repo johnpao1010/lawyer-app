@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="form-container">
+      <h2>Describe Your Case</h2>
+      <form (ngSubmit)="onSubmit()">
+        <textarea [(ngModel)]="caseDescription" name="caseDescription" placeholder="Describe your case here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>

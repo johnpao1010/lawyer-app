@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lawyer-app';
+  caseDescription: string = '';
+
+  constructor(private http: HttpClient) {}
+  onSubmit() {
+    const caseData = { description: this.caseDescription };
+    this.http.post('http://localhost:3000/api/cases', caseData).subscribe(response => {
+      console.log('Case submitted', response);
+    });
+  }
 }

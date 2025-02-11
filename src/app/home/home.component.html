@@ -1,0 +1,108 @@
+ 
+<div class="container">
+  <video autoplay muted loop id="background-video">
+    <source src="assets/reuAbogados.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <div class="content">        
+    <div class="text-top">    
+    <h2>Somos la firma jurídica líder en servicios legales especializados en recuperación de cartera y asesoría integral en las diversas ramas del derecho. </h2>    
+    </div>
+    <div class="divider"></div>
+    <div class="text-bottom">    
+      <h2>
+      Combinamos el uso de tecnologías de información con nuestra amplia experiencia para garantizar soluciones efectivas para prevenir riesgos legales en su organización. </h2>    
+      <button class="custom-button"  (click)="scrollToContactForm()">
+        <span>Agendar Asesoría</span>
+        <i class="calendar-icon"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <section class="layout">
+    <div class="grow2"><img src="assets/dinerocartera.png" alt="Ima "> 
+      <p> RECUPERACION DE CARTERA PARA ENTIDADES FINANCIERAS Y PROPIEDAD HORIZONTAL </p>
+    </div>
+    <div class="grow1"><img src="assets/acompanamiento.png" alt="Ima ">  
+      <p>ACOMPAÑAMIENTO JURIDICO ESPECIALIZADO EN DERECHO PENAL, FAMILIA, LABORAL, CIVIL</p>
+    </div>
+    <div class="grow3"><img src="assets/inslovenciaEcono.png" alt="Ima ">   
+      <p>ACOMPAÑAMIENTO EN PROCESOS DE INSOLVENCIA PERSONAS NATURAL O JURIDICAS</p>
+    </div>
+  </section>
+
+  <div class="quienesSomos">
+    <div class="quienesSomosContent">
+       
+      <div class="text-section">
+        <h1>Quiénes Somos?</h1>
+        <div class="divider2"></div>
+        <h2>Somos una firma, expertos en recuperación de cartera para entidades financieras y propiedad horizontal</h2>
+        <p>Somos una firma de abogados especializados en recuperación de cartera y asesoría integral en las diversas ramas del derecho. Contamos con un equipo de profesionales altamente calificados y con amplia experiencia en el sector legal. Nuestro compromiso es brindar soluciones efectivas y prevenir riesgos legales en su organización.</p>
+        <p>Nuestro equipo está conformado por abogados(as) especialistas y magísteres en diferentes disciplinas (derecho administrativo, derecho penal, derecho procesal, derecho civil, entre otros), al igual que profesionales en Auditorías, Economistas, Contadores, Ingenieros en Sistemas y personal de apoyo en diferentes regiones del país.</p>
+        
+        <button class="custom-button" (click)="navigateToTeam()">
+          <span>Nuestro Equipo</span>
+          <i class="group-icon"></i>
+        </button>
+
+        <button class="custom-button whatsapp-button" (click)="navigateToWhatsApp()">          
+          <img src="assets/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        </button>
+    </div>
+    <div class="image-section">
+        <img src="assets/abogados.jpg" alt="Equipo de abogados">
+    </div>
+    </div>  
+  </div>
+  
+  <div class="contacFormContainerFull">
+  <div class="contact-form-container" style="background-color: #1d1f2f; padding: 2rem; border-radius: 8px; color: white; max-width: 600px; margin: auto; font-family: Arial, sans-serif;">
+    <h2 style="color: #f4d03f;">¡Contáctanos!</h2>
+    <h3>Somos expertos en asesoría jurídica</h3>
+    <p>Comentanos tu caso y uno de nuestros consultores te contactará pronto.</p>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div style="margin-bottom: 1rem;">
+        <label for="nombre" style="display: block; margin-bottom: 0.5rem;">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="formData.nombre" placeholder="Nombre completo" style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;">
+      </div>
+    
+      <div style="margin-bottom: 1rem;">
+        <label for="email" style="display: block; margin-bottom: 0.5rem;">Correo electrónico</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.email" placeholder="correo@email.com" style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;">
+      </div>
+    
+      <div style="margin-bottom: 1rem;">
+        <label for="telefono" style="display: block; margin-bottom: 0.5rem;">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" [(ngModel)]="formData.telefono" placeholder="+57 (número de celular)" style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;">
+      </div>
+    
+      <div style="margin-bottom: 1rem;">
+        <label for="caso" style="display: block; margin-bottom: 0.5rem;">Descripción</label>
+        <textarea id="caso" name="caso" [(ngModel)]="formData.caso" placeholder="Escribe aquí tu caso" style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;" rows="4"></textarea>
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        <input type="checkbox" id="acceptTerms" [(ngModel)]="formData.acceptTerms" name="acceptTerms">
+        <label for="acceptTerms">Acepto Terminos y Condiciones</label>
+      </div>
+    
+      <button type="submit" [disabled]="!formData.acceptTerms" style="background-color: #f4d03f; color: #1d1f2f; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">Contactar asesor</button>
+    </form>
+    <app-message [message]="message" [isError]="isError"></app-message>
+  </div>
+
+  <div class="image-casosExitosos">
+    <h2>CASOS DE EXITO</h2>
+    <img src="assets/CasosExito.jpg" alt="casos">
+    <h2 id="counter">0</h2>
+</div>
+</div>
+ 
+</div>
+  
+
+  

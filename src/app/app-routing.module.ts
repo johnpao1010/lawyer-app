@@ -8,7 +8,7 @@ import { LegalServicesComponent } from './legal-services/legal-services.componen
 import { MissionVisionComponent } from './mission-vision/mission-vision.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'team', component: TeamComponent },

@@ -1,7 +1,7 @@
 // filepath: /c:/Users/JOHND/lawyer-app/src/app/contact/contact.component.ts
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-contact',

@@ -23,7 +23,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              {
+                "glob":"__redirects",
+                "input":"src",
+                "output":"/"
+              }
             ],
             "styles": [
               "src/styles.css"

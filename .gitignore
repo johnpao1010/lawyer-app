@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/lawyer-app
 /bazel-out
 
 # Node

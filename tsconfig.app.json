@@ -2,7 +2,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./lawyer-app/app",
+    "outDir": "./out-tsc/app",
     "types": []
   },
   "files": [
